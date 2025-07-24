@@ -1,4 +1,21 @@
+# create_requirements.py
 
+modules = [
+    "streamlit",
+    "yfinance",
+    "pandas",
+    "ta"
+]
+
+with open("requirements.txt", "w") as f:
+    for module in modules:
+        f.write(module + "\n")
+
+print("requirements.txt créé avec succès.")
+
+# Optionnel : installation automatique (nécessite que pip soit accessible)
+import os
+os.system("pip install -r requirements.txt")
 import streamlit as st
 import yfinance as yf
 import pandas as pd
